@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Guard::UI do
-  before { Guard.clear_options }
   after { Guard::UI.options = { level: :info, device: $stderr, template: ':time - :severity - :message', time_format: '%H:%M:%S' } }
 
   before do

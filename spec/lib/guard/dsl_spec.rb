@@ -118,7 +118,7 @@ describe Guard::Dsl do
 
     it 'disables the interactions with :off' do
       described_class.evaluate_guardfile(guardfile_contents: 'interactor :off')
-      expect(Guard::Interactor.enabled).to be_falsey
+      expect(Guard::Interactor).to_not be_enabled
     end
 
     it 'passes the options to the interactor' do
